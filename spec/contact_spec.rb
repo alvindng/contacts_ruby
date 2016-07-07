@@ -49,7 +49,7 @@ describe('Contact') do
       expect(test_contact.phone()).to(eq([test_phone]))
     end
   end
-  
+
   describe('#add_email') do
     it "saves address object into contact object" do
       test_contact = Contact.new({:first => "tony", :last => "fabz", :title => "boss", :company => "home"})

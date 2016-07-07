@@ -59,8 +59,6 @@ post('/contact/:id/phone') do
   erb(:contact)
 end
 
-
-
 get('/contacts/new') do
   erb(:contacts_form)
 end
