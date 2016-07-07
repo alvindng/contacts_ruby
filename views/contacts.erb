@@ -1,0 +1,9 @@
+<h1>Contacts</h1>
+
+<h3>Here are your contacts</h3>
+<ul>
+  <% @contacts.each do |contact| %>
+    <li><a href="/contact/<%= contact.id() %>"><%= contact.first() %> <%= contact.last() %></a></li>
+  <% end %>
+</ul>
+<a href="/"><button class="btn-warning" type="button" name="back">Go Back</button></a>

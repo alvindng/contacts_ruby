@@ -1,0 +1,18 @@
+<h1>Add Your Phone Number</h1>
+<form action="/contact/<%= @contact.id() %>/phone" method="post">
+  <input type="hidden" name="id" value="<%= @contact.id() %>">
+  <div class="form-group">
+    <label for="area_code">Enter your Area Code</label>
+    <input type="text" name="area_code" id="area_code" value="" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="number">Enter your Phone Number</label>
+    <input type="text" name="number" id="number" value="" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="ptype">Enter your Phone Number Type</label>
+    <input type="text" name="ptype" id="ptype" value="" class="form-control">
+  </div>
+  <button type="submit" name="submit">Add Phone Number</button>
+  <a href="/contact/<%= @contact.id() %>"><button class="btn-warning" type="button" name="back">Go Back</button></a>
+</form>

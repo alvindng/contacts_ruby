@@ -1,0 +1,28 @@
+<h1><%= @contact.first() %>  <%= @contact.last() %></h1>
+<h3><%= @contact.company %>, <%= @contact.title() %></h3>
+<h3>Address</h3>
+<ul>
+  <% @contact.address.each() do |address| %>
+    <li><%= address.street() %> <%= address.city() %>, <%= address.state() %> <%= address.zip() %>, <%= address.type() %></li>
+  <% end %>
+</ul>
+<a href="/contact/<%= @contact.id %>/address/new"><button class="btn-primary" type="button" name="add_address">Add an Address</button></a>
+
+<h3>Email</h3>
+<ul>
+  <% @contact.email.each() do |email| %>
+    <li><%= email.email() %>, <%= email.type() %></li>
+  <% end %>
+</ul>
+<a href="/contact/<%= @contact.id %>/email/new"><button class="btn-primary" type="button" name="add_email">Add an Email</button></a>
+
+<h3>Phone</h3>
+<ul>
+  <% @contact.phone.each() do |phone| %>
+    <li><%= phone.area_code() %><%= phone.number() %>, <%= phone.type() %></li>
+  <% end %>
+</ul>
+<a href="/contact/<%= @contact.id %>/phone/new"><button class="btn-primary" type="button" name="add_phone">Add a Phone Number</button></a>
+<br>
+<br>
+<a href="/contacts"><button class="btn-warning" type="button" name="back">Go Back</button></a>
